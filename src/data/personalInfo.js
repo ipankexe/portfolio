@@ -48,5 +48,5 @@ export const personalInfo = {
     email: "mailto:irfaanmuh27@gmail.com"
   },
 
-  cvDocumentPath: "/documents/Muhammad-Irfan-Setiawan-CV.pdf"
+  cvDocumentPath: `${import.meta.env.BASE_URL}documents/Muhammad-Irfan-Setiawan-CV.pdf`
 };

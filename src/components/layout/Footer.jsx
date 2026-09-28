@@ -107,7 +107,7 @@ export function Footer() {
               </h4>
               <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                 <li><a href="#cv" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{t('nav.cv', 'Digital CV')}</a></li>
-                <li><a href="/documents/Muhammad-Irfan-Setiawan-CV.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{language === 'id' ? 'Lihat Resume PDF' : 'View PDF Resume'}</a></li>
+                <li><a href={personalInfo.cvDocumentPath} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{language === 'id' ? 'Lihat Resume PDF' : 'View PDF Resume'}</a></li>
                 <li><a href="#certifications" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{language === 'id' ? 'Sertifikasi Cisco' : 'Cisco Certification'}</a></li>
                 <li><a href="#contact" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{t('nav.contact', 'Contact Form')}</a></li>
               </ul>

@@ -5,6 +5,7 @@ import { ThemeToggle } from '../ui/ThemeToggle';
 import { LanguageToggle } from '../ui/LanguageToggle';
 import { Button } from '../ui/Button';
 import { useLanguage } from '../../context/LanguageContext';
+import { personalInfo } from '../../data/personalInfo';
 
 export function Navbar({ activeSection, theme, toggleTheme, onOpenCommandMenu }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -136,7 +137,7 @@ export function Navbar({ activeSection, theme, toggleTheme, onOpenCommandMenu })
           {/* CV Download Button */}
           <Button
             as="a"
-            href="/documents/Muhammad-Irfan-Setiawan-CV.pdf"
+            href={personalInfo.cvDocumentPath}
             download="Muhammad-Irfan-Setiawan-CV.pdf"
             variant="outline"
             size="sm"
@@ -211,7 +212,7 @@ export function Navbar({ activeSection, theme, toggleTheme, onOpenCommandMenu })
                 </div>
                 <Button
                   as="a"
-                  href="/documents/Muhammad-Irfan-Setiawan-CV.pdf"
+                  href={personalInfo.cvDocumentPath}
                   download="Muhammad-Irfan-Setiawan-CV.pdf"
                   variant="primary"
                   size="sm"
