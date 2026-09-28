@@ -6,7 +6,7 @@
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> **Live Portfolio:** [https://ipankexe.github.io/portfolio](https://github.com/ipankexe/portfolio) (or custom deployment domain)  
+> **Live Portfolio:** (https://ipankexe.github.io/portfolio/) (or custom deployment domain)  
 > **Contact:** [irfaanmuh27@gmail.com](mailto:irfaanmuh27@gmail.com) • [WhatsApp (+62 857-9947-9834)](https://wa.me/6285799479834) • [LinkedIn](https://linkedin.com/in/irfanswettiawan) • [GitHub](https://github.com/ipankexe)
 
 ---
