@@ -1,22 +1,21 @@
 export const experienceData = [
   {
     id: 1,
-    role: "Backend & Web Development Project",
-    company: "Diskominfo (Dinas Komunikasi dan Informatika)",
-    type: "Internship / Practical Project",
-    period: "Verified Project",
+    role: "Fullstack Web Developer — Internship",
+    company: "Dinas Komunikasi dan Informatika (Diskominfo) Kota Semarang",
+    type: "Internship",
+    period: "June 2025 — September 2025",
     location: "Semarang, Indonesia",
-    badge: "Government Web Technology",
-    technologies: ["React.js", "JavaScript", "Node.js", "Express.js", "MongoDB", "Mongoose", "REST APIs"],
-    description: "Contributed to the engineering and deployment of a municipal government web portal and information system for the Fire & Rescue Department (DAMKAR).",
+    badge: "Government Web Portal",
+    technologies: ["React.js", "Express.js", "Node.js", "MongoDB", "REST APIs", "Git"],
+    description: "Developed a web-based Fire Department Information System (DAMKAR) during an internship at Diskominfo Kota Semarang.",
     responsibilities: [
-      "Engineered backend RESTful API services handling citizen information dissemination, incident submission, and public visit schedules.",
-      "Designed and implemented MongoDB database collections and Mongoose schemas to support structured municipal records.",
-      "Integrated geospatial coordinates and map layers for interactive fire station locator and emergency incident mapping.",
-      "Developed secure server-side routes, request validation middleware, and media upload handling.",
-      "Collaborated with government supervisors and project teammates to align digital workflows with municipal public service requirements."
+      "Built responsive frontend interfaces and integrated REST APIs to support seamless communication between client and server.",
+      "Implemented CRUD functionality, image upload features, and database management for news, contact, and public service request modules.",
+      "Performed debugging, system testing, and feature enhancements to improve application reliability and performance.",
+      "Collaborated with the development team using Git and participated in requirement analysis, implementation, and deployment activities."
     ],
-    highlight: "Delivered a fully functional municipal service portal with integrated visit scheduling and GIS geoportal."
+    highlight: "Successfully delivered and deployed the municipal Fire Department system."
   },
   {
     id: 2,

@@ -8,22 +8,18 @@ import { useLanguage } from '../../context/LanguageContext';
 export function Resume() {
   const { language, t } = useLanguage();
   const [copiedSummary, setCopiedSummary] = useState(false);
-  const cvPath = personalInfo.cvDocumentPath;
+  const cvPath = `${personalInfo.cvDocumentPath}?v=real-cv`;
 
   const handlePrint = () => {
     window.print();
   };
 
   const handleCopySummary = () => {
-    const text = `MUHAMMAD IRFAN SETIAWAN, S.Kom
-Informatics Engineering Graduate — Universitas Dian Nuswantoro (UDINUS)
-Email: ${personalInfo.email}
-WhatsApp: ${personalInfo.phone} (${personalInfo.whatsapp})
-GitHub: ${personalInfo.socialLinks.github}
-Instagram: ${personalInfo.socialLinks.instagram}
+    const text = `MUHAMMAD IRFAN SETIAWAN
++62 857-9947-9834 | ${personalInfo.email} | linkedin.com/in/irfanswettiawan | github.com/ipankexe | Semarang, Indonesia
 
-PROFILE SUMMARY:
-Informatics Engineering graduate from UDINUS with practical experience developing software systems, full-stack web applications, and database architectures. Experienced with Laravel, PHP, React.js, Node.js, Express.js, MySQL, and MongoDB. Practical contributions at Diskominfo Semarang municipal Damkar portal. Cisco Cybersecurity Essentials certified.`;
+SUMMARY:
+Informatics Engineering graduate from Dian Nuswantoro University (UDINUS) with hands-on experience in full-stack web development through internship and independent software projects. Experienced in building web applications using Laravel, React.js, Express.js, MySQL, and MongoDB, including REST API integration, role-based access control, transaction processing, and database-driven systems. Also developing skills in Python, data analytics, and machine learning for data-driven problem solving. Seeking an entry-level Software Engineer, Full-Stack Developer, Backend Developer, or Data-related role where I can contribute and continue developing my technical expertise.`;
 
     navigator.clipboard?.writeText(text);
     setCopiedSummary(true);
@@ -134,7 +130,7 @@ Informatics Engineering graduate from UDINUS with practical experience developin
               Professional Summary
             </h2>
             <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed bg-slate-50/70 dark:bg-slate-900/40 p-4 rounded-2xl border border-slate-200/50 dark:border-slate-800/50">
-              Informatics Engineering graduate with hands-on experience developing web-based applications and information systems through academic and practical projects. Familiar with PHP, Laravel, JavaScript, React.js, SQL, MySQL, MongoDB, Node.js, and Express.js. Also developing foundational capabilities in data analysis and machine learning, including data preparation, exploratory analysis, visualization, and basic machine learning concepts.
+              Informatics Engineering graduate from Dian Nuswantoro University (UDINUS) with hands-on experience in full-stack web development through internship and independent software projects. Experienced in building web applications using Laravel, React.js, Express.js, MySQL, and MongoDB, including REST API integration, role-based access control, transaction processing, and database-driven systems. Also developing skills in Python, data analytics, and machine learning for data-driven problem solving. Seeking an entry-level Software Engineer, Full-Stack Developer, Backend Developer, or Data-related role where I can contribute and continue developing my technical expertise.
             </p>
           </div>
 
@@ -145,20 +141,20 @@ Informatics Engineering graduate from UDINUS with practical experience developin
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div className="p-3.5 rounded-xl bg-slate-50/50 dark:bg-slate-900/30 border border-slate-200/50 dark:border-slate-800/50">
-                <span className="font-bold text-slate-900 dark:text-white block mb-1">Programming & Web:</span>
-                <span className="text-slate-600 dark:text-slate-400">PHP, Laravel, JavaScript (ES6+), React.js, HTML5, CSS3, Tailwind CSS</span>
+                <span className="font-bold text-slate-900 dark:text-white block mb-1">Programming Languages:</span>
+                <span className="text-slate-600 dark:text-slate-400">JavaScript, PHP, Python, SQL, HTML, CSS</span>
               </div>
               <div className="p-3.5 rounded-xl bg-slate-50/50 dark:bg-slate-900/30 border border-slate-200/50 dark:border-slate-800/50">
-                <span className="font-bold text-slate-900 dark:text-white block mb-1">Backend & Databases:</span>
-                <span className="text-slate-600 dark:text-slate-400">Node.js, Express.js, MySQL, MongoDB, Mongoose, SQL Query Optimization</span>
+                <span className="font-bold text-slate-900 dark:text-white block mb-1">Web Development:</span>
+                <span className="text-slate-600 dark:text-slate-400">Laravel, React.js, Express.js, React Native, Bootstrap, Tailwind CSS, REST APIs</span>
               </div>
               <div className="p-3.5 rounded-xl bg-slate-50/50 dark:bg-slate-900/30 border border-slate-200/50 dark:border-slate-800/50">
                 <span className="font-bold text-slate-900 dark:text-white block mb-1">Data & Machine Learning:</span>
-                <span className="text-slate-600 dark:text-slate-400">Data Cleaning, Preparation, EDA, Data Visualization, ML Fundamentals</span>
+                <span className="text-slate-600 dark:text-slate-400">Python for Data Analysis, Data Cleaning, EDA, Data Visualization, ML Fundamentals</span>
               </div>
               <div className="p-3.5 rounded-xl bg-slate-50/50 dark:bg-slate-900/30 border border-slate-200/50 dark:border-slate-800/50">
-                <span className="font-bold text-slate-900 dark:text-white block mb-1">Infrastructure & Security:</span>
-                <span className="text-slate-600 dark:text-slate-400">Linux (Ubuntu Server), Network Fundamentals, Cisco Cybersecurity Essentials</span>
+                <span className="font-bold text-slate-900 dark:text-white block mb-1">Databases & Tools:</span>
+                <span className="text-slate-600 dark:text-slate-400">MySQL, MongoDB, Git, GitHub, Docker, Chart.js, Linux Server</span>
               </div>
             </div>
           </div>
@@ -168,20 +164,23 @@ Informatics Engineering graduate from UDINUS with practical experience developin
             <h2 className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">
               Education
             </h2>
-            <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-1">
+            <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-1 p-4 rounded-2xl bg-slate-50/70 dark:bg-slate-900/40 border border-slate-200/50 dark:border-slate-800/50">
               <div>
                 <h3 className="text-sm font-bold text-slate-900 dark:text-white font-display">
-                  Universitas Dian Nuswantoro (UDINUS)
+                  Universitas Dian Nuswantoro (UDINUS) — Semarang, Indonesia
                 </h3>
-                <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">
-                  Bachelor of Computer Science (S1) — Informatics Engineering (Teknik Informatika)
+                <p className="text-xs text-blue-600 dark:text-blue-400 font-semibold mt-0.5">
+                  Bachelor of Informatics Engineering (S.Kom) • Cumulative GPA: <strong>3.22 / 4.0</strong>
+                </p>
+                <p className="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
+                  <span className="font-semibold text-slate-800 dark:text-slate-200">Relevant Coursework:</span> Algorithms, Network Fundamentals, Security Essentials, Data Structures, Clean Code and Design Pattern, Object-Oriented Programming, Database Systems, IT Fundamentals
                 </p>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                  Skripsi: "Perancangan Sistem Point of Sales berbasis Web pada Rumah Makan Kulu Asri Menggunakan Metode Waterfall"
+                  <span className="font-semibold">Skripsi:</span> "Perancangan Sistem Point of Sales berbasis Web pada Rumah Makan Kulu Asri Menggunakan Metode Waterfall"
                 </p>
               </div>
-              <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">
-                Graduated (S.Kom)
+              <span className="text-xs font-mono font-semibold text-emerald-600 dark:text-emerald-400 shrink-0">
+                Graduated (June 2026)
               </span>
             </div>
           </div>
@@ -189,33 +188,36 @@ Informatics Engineering graduate from UDINUS with practical experience developin
           {/* Section: EXPERIENCE */}
           <div>
             <h2 className="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-3">
-              Practical Experience
+              Experience
             </h2>
             <div className="space-y-4 text-xs sm:text-sm">
-              <div className="border-l-2 border-blue-500 pl-3.5 py-0.5">
+              <div className="border-l-2 border-emerald-500 pl-3.5 py-0.5">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between">
                   <h3 className="font-bold text-slate-900 dark:text-white font-display">
-                    Web Development / Backend Project — Diskominfo
+                    Fullstack Web Developer — Capstone Project (Self-employed)
                   </h3>
-                  <span className="text-xs font-mono text-slate-400">Practical Project</span>
+                  <span className="text-xs font-mono text-slate-400">April 2026 — June 2026</span>
                 </div>
-                <p className="text-xs text-blue-600 dark:text-blue-400 font-mono mt-0.5">
-                  Stack: React.js, Node.js, Express.js, MongoDB, Mongoose, GIS Geoportal
+                <p className="text-xs text-emerald-600 dark:text-emerald-400 font-mono mt-0.5">
+                  Stack: Laravel 12, Bootstrap 5, Tailwind CSS, MySQL, lockForUpdate, Chart.js
                 </p>
                 <p className="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
-                  Engineered backend RESTful API services handling citizen information dissemination, incident submission, and public visit schedules for the municipal Fire Department (DAMKAR).
+                  Designed & developed restaurant POS with real-time cart order processing, table occupancy tracking, discount calculations, secure transaction rollback (Void system) with pessimistic database locks (lockForUpdate) for data integrity, inventory audit logs, and interactive Chart.js sales analytics.
                 </p>
               </div>
 
-              <div className="border-l-2 border-amber-500 pl-3.5 py-0.5">
+              <div className="border-l-2 border-blue-500 pl-3.5 py-0.5">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between">
                   <h3 className="font-bold text-slate-900 dark:text-white font-display">
-                    Barkit / Operational Support — Dikala Kopi Group
+                    Fullstack Web Developer — Dinas Komunikasi dan Informatika (Diskominfo) Kota Semarang
                   </h3>
-                  <span className="text-xs font-mono text-slate-400">Operational Support</span>
+                  <span className="text-xs font-mono text-slate-400">June 2025 — September 2025</span>
                 </div>
-                <p className="text-xs text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
-                  Coordinated front-line store operations, inventory balance audits, and cashier transactions during fast-paced service shifts.
+                <p className="text-xs text-blue-600 dark:text-blue-400 font-mono mt-0.5">
+                  Stack: React.js, Express.js, Node.js, MongoDB, REST APIs, Git
+                </p>
+                <p className="text-xs text-slate-600 dark:text-slate-300 mt-1.5 leading-relaxed">
+                  Developed web-based Fire Department Information System (DAMKAR), built responsive frontend interfaces and REST APIs, implemented CRUD and image upload modules, performed debugging and testing, and collaborated with government supervisors and development team.
                 </p>
               </div>
             </div>

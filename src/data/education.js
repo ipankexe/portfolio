@@ -5,6 +5,8 @@ export const educationData = [
     localDegree: "Sarjana Komputer (S.Kom) — Teknik Informatika",
     faculty: "Faculty of Computer Science",
     status: "Graduate",
+    period: "2022 — 2026",
+    gpa: "3.22 / 4.0",
     location: "Semarang, Central Java, Indonesia",
     thesis: {
       title: "Perancangan Sistem Point of Sales berbasis Web pada Rumah Makan Kulu Asri Menggunakan Metode Waterfall",
@@ -15,13 +17,14 @@ export const educationData = [
       achievement: "Successfully defended and completed bachelor thesis requirements."
     },
     keyCourses: [
-      "Software Engineering & System Architecture",
-      "Web Application Development (Full Stack)",
-      "Database Systems & Relational Schema Design",
-      "Algorithms & Data Structures",
-      "Data Mining & Data Analysis Fundamentals",
-      "Computer Networks & Operating Systems",
-      "Information System Security & Ethics"
+      "Algorithms",
+      "Network Fundamentals",
+      "Security Essentials",
+      "Data Structures",
+      "Clean Code and Design Pattern",
+      "Object-Oriented Programming",
+      "Database Systems",
+      "IT Fundamentals"
     ],
     highlights: [
       "Solid theoretical and practical grounding in full-stack software development.",
