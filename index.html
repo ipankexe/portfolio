@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Irfan Setiawan — Software Engineer & Web Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Muhammad Irfan Setiawan, S.Kom. Informatics Engineering Graduate from Universitas Dian Nuswantoro (UDINUS). Aspiring Software Engineer, Web Developer, and Data & Machine Learning Enthusiast." />
+    <meta name="keywords" content="Muhammad Irfan Setiawan, Software Engineer, Web Developer, UDINUS, Informatics Engineering, React, Laravel, PHP, Node.js, Express, MySQL, Portfolio, Indonesian Developer" />
+    <meta name="author" content="Muhammad Irfan Setiawan" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Muhammad Irfan Setiawan — Software Engineer Portfolio" />
+    <meta property="og:description" content="Explore projects, technical skills, practical experience, and digital CV of Muhammad Irfan Setiawan (UDINUS Graduate)." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/irfan_portrait.jpg" />
+    
+    <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans, DM Sans, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Script to prevent theme flash -->
+    <script>
+      (function() {
+        try {
+          const storedTheme = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-[#0b0f19] dark:text-slate-100 antialiased font-sans selection:bg-blue-500 selection:text-white transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
