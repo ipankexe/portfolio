@@ -1,5 +1,7 @@
 # Personal Portfolio Website — Muhammad Irfan Setiawan, S.Kom
 
+[![Live Demo on Vercel](https://img.shields.io/badge/Live_Demo-portfolioku--have--fun--irfun.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolioku-have-fun-irfun.vercel.app)
+
 ![React](https://img.shields.io/badge/React-19.2-61DAFB?logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?logo=vite&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-06B6D4?logo=tailwindcss&logoColor=white)
@@ -7,6 +9,8 @@
 ![Vitest](https://img.shields.io/badge/Tests-13%20Passed-22c55e?logo=vitest&logoColor=white)
 ![Oxlint](https://img.shields.io/badge/Linter-0%20Errors-10b981)
 ![Bilingual](https://img.shields.io/badge/Language-ID%20%7C%20EN-blue)
+
+> 🌐 **Live Website:** [https://portfolioku-have-fun-irfun.vercel.app](https://portfolioku-have-fun-irfun.vercel.app)
 
 A modern, high-performance, and fully responsive personal portfolio website built for **Muhammad Irfan Setiawan, S.Kom** — an Informatics Engineering graduate from Universitas Dian Nuswantoro (UDINUS, IPK 3.22/4.00) focusing on Web Development, Backend Systems, and Database Management, with active explorations in Python, Data Analytics, and Machine Learning.
 
