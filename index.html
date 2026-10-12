@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Muhammad Irfan Setiawan | Software Engineer & Web Developer</title>
+    <meta name="title" content="Muhammad Irfan Setiawan | Software Engineer & Web Developer" />
+    <meta name="description" content="Personal Portfolio of Muhammad Irfan Setiawan (S.Kom) - Informatics Engineering graduate focusing on Web Development, Backend Systems, and Database Management, exploring Data Analytics & Machine Learning." />
+    <meta name="keywords" content="Muhammad Irfan Setiawan, ipankexe, Software Engineer, Web Developer, Fullstack Developer, Laravel, React, Node.js, Express, MongoDB, MySQL, UDINUS" />
+    <meta name="author" content="Muhammad Irfan Setiawan" />
+    <meta name="theme-color" content="#090d16" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/ipankexe" />
+    <meta property="og:title" content="Muhammad Irfan Setiawan | Software Engineer & Web Developer" />
+    <meta property="og:description" content="Building Digital Solutions Through Code. Personal portfolio and project case studies of Muhammad Irfan Setiawan." />
+    <meta property="og:image" content="/irfan-hero.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Muhammad Irfan Setiawan | Software Engineer & Web Developer" />
+    <meta property="twitter:description" content="Building Digital Solutions Through Code. Personal portfolio and project case studies of Muhammad Irfan Setiawan." />
+    <meta property="twitter:image" content="/irfan-hero.jpg" />
+
+    <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- Anti-FOUC Theme Pre-initialization -->
+    <script>
+      (function() {
+        try {
+          const storedTheme = localStorage.getItem('theme');
+          const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (storedTheme === 'dark' || (!storedTheme && systemPrefersDark)) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+          } else {
+            document.documentElement.classList.add('light');
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-[#07090e] dark:text-slate-100 transition-colors duration-300 antialiased selection:bg-blue-600 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
