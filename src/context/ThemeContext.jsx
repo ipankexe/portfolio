@@ -8,7 +8,7 @@ export const ThemeProvider = ({ children }) => {
       if (stored === 'light' || stored === 'dark') {
         return stored;
       }
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'dark';
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     } catch {
       return 'dark';
     }

@@ -9,13 +9,6 @@ import { scrollToSection } from '../../utils/helpers';
 export const Hero = () => {
   const { t } = useLanguage();
 
-  const floatingTags = [
-    { name: 'Laravel 12', position: '-top-6 -left-6', color: 'border-rose-500/30 text-rose-500 bg-rose-500/10' },
-    { name: 'React 19', position: '-top-6 -right-6', color: 'border-blue-500/30 text-blue-500 bg-blue-500/10' },
-    { name: 'MySQL & ACID', position: '-bottom-6 -left-6', color: 'border-emerald-500/30 text-emerald-500 bg-emerald-500/10' },
-    { name: 'Express & MongoDB', position: '-bottom-6 -right-6', color: 'border-violet-500/30 text-violet-500 bg-violet-500/10' },
-  ];
-
   return (
     <section
       id="hero"
@@ -155,59 +148,93 @@ export const Hero = () => {
           </div>
 
           {/* Right Column: Editorial Photo & Tech Badges (5 cols) */}
-          <div className="lg:col-span-5 relative flex justify-center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative w-72 sm:w-80 md:w-96 aspect-[3/4] rounded-3xl overflow-hidden p-2 bg-gradient-to-b from-blue-500/20 via-indigo-500/10 to-transparent border border-slate-200/80 dark:border-slate-800 shadow-2xl group"
-            >
-              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-slate-900">
-                <img
-                  src="/irfan-hero.jpg"
-                  alt="Muhammad Irfan Setiawan"
-                  className="w-full h-full object-cover object-center filter contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out"
-                  loading="eager"
-                />
-                
-                {/* Subtle vignette and bottom gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80" />
+          <div className="lg:col-span-5 relative flex items-center justify-center">
+            {/* Ambient backlight glow */}
+            <div className="absolute w-72 sm:w-80 md:w-96 aspect-[3/4] bg-gradient-to-tr from-blue-600/25 via-indigo-600/20 to-violet-600/25 rounded-3xl blur-2xl -z-10 opacity-70 pointer-events-none" />
 
-                {/* Bottom Overlay Card */}
-                <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-slate-900/85 backdrop-blur-md border border-white/10 text-white shadow-lg">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-xs font-mono text-blue-400 font-semibold">S.Kom Graduate</p>
-                      <p className="text-sm font-bold text-white">Muhammad Irfan Setiawan</p>
-                    </div>
-                    <div className="w-8 h-8 rounded-lg bg-blue-600/30 border border-blue-400/40 flex items-center justify-center text-blue-400">
-                      <Terminal className="w-4 h-4" />
+            {/* Photo Card Container with relative positioning for floating badges */}
+            <div className="relative w-72 sm:w-80 md:w-96 aspect-[3/4]">
+              {/* Main Photo Card Frame */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="relative w-full h-full rounded-3xl p-2.5 bg-gradient-to-b from-blue-500/20 via-slate-200/50 dark:via-slate-800/50 to-slate-200/20 dark:to-slate-900/20 border border-slate-200/90 dark:border-slate-800 shadow-2xl group"
+              >
+                {/* Inner Photo Container - with overflow-hidden to cleanly clip the image */}
+                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-slate-950">
+                  <img
+                    src="/irfan-hero.jpg"
+                    alt="Muhammad Irfan Setiawan"
+                    className="w-full h-full object-cover object-center filter contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out"
+                    loading="eager"
+                  />
+                  
+                  {/* Subtle vignette and bottom gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-85" />
+
+                  {/* Bottom Overlay Card */}
+                  <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-3 sm:p-3.5 rounded-xl bg-slate-900/90 backdrop-blur-md border border-white/10 text-white shadow-xl">
+                    <div className="flex items-center justify-between gap-2">
+                      <div className="min-w-0">
+                        <div className="flex items-center gap-1.5 mb-0.5">
+                          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                          <p className="text-[11px] font-mono text-blue-400 font-semibold truncate">
+                            S.Kom Graduate • Informatics
+                          </p>
+                        </div>
+                        <p className="text-sm font-bold text-white tracking-tight truncate">
+                          Muhammad Irfan Setiawan
+                        </p>
+                      </div>
+                      <div className="w-8 h-8 rounded-lg bg-blue-600/25 border border-blue-400/40 flex items-center justify-center text-blue-400 shrink-0">
+                        <Terminal className="w-4 h-4" />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Floating badges around the card */}
-              <div className="hidden sm:block absolute -top-3 -right-3 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-lg text-xs font-mono font-semibold text-blue-600 dark:text-blue-400">
-                UDINUS '26 • GPA 3.22
-              </div>
-
-              <div className="hidden sm:block absolute -bottom-3 -left-3 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-lg text-xs font-mono font-semibold text-emerald-600 dark:text-emerald-400">
-                Diskominfo & Capstone POS
-              </div>
-            </motion.div>
-
-            {/* Floating Tech Chips around photo */}
-            {floatingTags.map((tag, idx) => (
-              <motion.div
-                key={idx}
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 3.5 + idx, repeat: Infinity, ease: 'easeInOut', delay: idx * 0.5 }}
-                className={`hidden xl:block absolute ${tag.position} px-3 py-1.5 rounded-xl border backdrop-blur-md shadow-md text-xs font-mono font-semibold ${tag.color}`}
-              >
-                {tag.name}
               </motion.div>
-            ))}
+
+              {/* Floating Badge 1: Top-Right (Academic Degree & GPA) */}
+              <motion.div
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute -top-3 -right-2 sm:-top-4 sm:-right-4 z-20 flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200/90 dark:border-slate-800 shadow-xl text-[11px] sm:text-xs font-mono font-bold text-blue-600 dark:text-blue-400"
+              >
+                <span className="w-2 h-2 rounded-full bg-blue-500 shrink-0" />
+                <span>UDINUS '26 • GPA 3.22</span>
+              </motion.div>
+
+              {/* Floating Badge 2: Bottom-Left (Internship Experience & Capstone) */}
+              <motion.div
+                animate={{ y: [0, 6, 0] }}
+                transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 0.4 }}
+                className="absolute -bottom-3 -left-2 sm:-bottom-4 sm:-left-4 z-20 flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200/90 dark:border-slate-800 shadow-xl text-[11px] sm:text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
+                <span>Diskominfo & Capstone POS</span>
+              </motion.div>
+
+              {/* Floating Badge 3: Top-Left (Backend Tech Focus) */}
+              <motion.div
+                animate={{ y: [0, -7, 0] }}
+                transition={{ duration: 3.8, repeat: Infinity, ease: 'easeInOut', delay: 0.2 }}
+                className="hidden sm:flex absolute top-10 -left-6 z-20 items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-rose-500/30 text-rose-600 dark:text-rose-400 shadow-lg text-xs font-mono font-semibold"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-rose-500 shrink-0" />
+                <span>Laravel 12</span>
+              </motion.div>
+
+              {/* Floating Badge 4: Bottom-Right (Frontend Tech Focus) */}
+              <motion.div
+                animate={{ y: [0, 7, 0] }}
+                transition={{ duration: 4.2, repeat: Infinity, ease: 'easeInOut', delay: 0.6 }}
+                className="hidden sm:flex absolute bottom-12 -right-6 z-20 items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-blue-500/30 text-blue-600 dark:text-blue-400 shadow-lg text-xs font-mono font-semibold"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
+                <span>React 19</span>
+              </motion.div>
+            </div>
           </div>
 
         </div>
