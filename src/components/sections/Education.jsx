@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, BookOpen, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { GraduationCap, BookOpen, Award, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../../hooks/useLanguage';
 
 export const Education = () => {
@@ -16,6 +16,10 @@ export const Education = () => {
     'Web Application Engineering',
     'IT Fundamentals',
   ];
+
+  const activeCoursework = Array.isArray(t('education.coursework'))
+    ? t('education.coursework')
+    : courseworkList;
 
   return (
     <section id="education" className="py-24 relative overflow-hidden">
@@ -86,7 +90,7 @@ export const Education = () => {
               </h4>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {courseworkList.map((course, idx) => (
+                {activeCoursework.map((course, idx) => (
                   <div
                     key={idx}
                     className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/40 border border-slate-200/60 dark:border-slate-800 text-xs font-medium text-slate-700 dark:text-slate-300 flex items-center gap-2"
@@ -110,34 +114,39 @@ export const Education = () => {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center shadow-md shadow-indigo-600/20">
-                  <ShieldCheck className="w-6 h-6" />
+                  <Award className="w-6 h-6" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white">
-                    {t('education.certTitle')}
-                  </h3>
-                  <span className="text-xs font-mono text-indigo-600 dark:text-indigo-400">
-                    Cisco Networking Academy
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2">
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white truncate">
+                      {t('education.certTitle')}
+                    </h3>
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 border border-indigo-200/60 dark:border-indigo-800/60 shrink-0">
+                      2026
+                    </span>
+                  </div>
+                  <span className="text-xs font-mono text-indigo-600 dark:text-indigo-400 font-semibold block truncate">
+                    {t('education.certIssuer')}
                   </span>
                 </div>
               </div>
 
               <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/70 dark:border-slate-800 space-y-3 mb-6">
                 <h4 className="text-sm font-bold text-slate-900 dark:text-white">
-                  {t('education.ciscoTitle')}
+                  {t('education.certName')}
                 </h4>
                 <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                  {t('education.ciscoDesc')}
+                  {t('education.certDesc')}
                 </p>
                 <div className="pt-2 flex items-center gap-2 text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold">
-                  <CheckCircle2 className="w-3.5 h-3.5" />
-                  <span>Verified Academic Curriculum Credential</span>
+                  <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
+                  <span>{t('education.certStatus')}</span>
                 </div>
               </div>
             </div>
 
             <div className="text-xs text-slate-500 dark:text-slate-400 italic">
-              Didukung fondasi clean code, algoritma pemecahan masalah, dan keamanan siber terstruktur.
+              {t('education.certFooter')}
             </div>
           </motion.div>
 
