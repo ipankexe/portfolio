@@ -62,7 +62,7 @@ export const Skills = () => {
         </div>
 
         {/* Master Tab: Technical vs Soft Skills */}
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-10 no-print">
           <div className="inline-flex p-1.5 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
             <button
               type="button"
@@ -98,7 +98,7 @@ export const Skills = () => {
         {/* Technical Skills Tab Content */}
         {activeTab === 'technical' && (
           <div className="space-y-8">
-            <p className="text-xs sm:text-sm text-center text-slate-500 dark:text-slate-400 italic">
+            <p className="text-xs sm:text-sm text-center text-slate-500 dark:text-slate-400 italic no-print">
               {t('skills.clickPrompt')}
             </p>
 

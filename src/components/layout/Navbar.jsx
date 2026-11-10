@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ArrowUpRight, FileDown } from 'lucide-react';
+import { Menu, X, ArrowUpRight, FileDown, Printer } from 'lucide-react';
 import { useLanguage } from '../../hooks/useLanguage';
 import { ThemeToggle } from '../ui/ThemeToggle';
 import { LanguageToggle } from '../ui/LanguageToggle';
 import { Button } from '../ui/Button';
-import { scrollToSection } from '../../utils/helpers';
+import { DownloadDropdown } from '../ui/DownloadDropdown';
+import { scrollToSection, downloadPortfolioAsPdf } from '../../utils/helpers';
 
 export const Navbar = () => {
   const { t } = useLanguage();
@@ -120,18 +121,8 @@ export const Navbar = () => {
             <LanguageToggle />
             <ThemeToggle />
 
-            {/* Quick CV Download in Navbar for Recruiters */}
-            <div className="hidden md:block">
-              <Button
-                variant="primary"
-                size="sm"
-                href="/Muhammad-Irfan-Setiawan-CV.pdf"
-                download="Muhammad-Irfan-Setiawan-CV.pdf"
-                icon={FileDown}
-              >
-                {t('nav.downloadCv')}
-              </Button>
-            </div>
+            {/* Quick Document Download (CV & Portfolio) in Navbar for Recruiters */}
+            <DownloadDropdown className="hidden md:block" />
 
             {/* Mobile Menu Hamburger Button */}
             <button
@@ -177,7 +168,7 @@ export const Navbar = () => {
                 );
               })}
 
-              <div className="pt-3 mt-2 border-t border-slate-100 dark:border-slate-800">
+              <div className="pt-3 mt-2 border-t border-slate-100 dark:border-slate-800 space-y-2">
                 <Button
                   variant="primary"
                   size="md"
@@ -187,6 +178,18 @@ export const Navbar = () => {
                   className="w-full"
                 >
                   {t('nav.downloadCv')}
+                </Button>
+                <Button
+                  variant="outline"
+                  size="md"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    downloadPortfolioAsPdf('Muhammad-Irfan-Setiawan-Portofolio');
+                  }}
+                  icon={Printer}
+                  className="w-full justify-center border-indigo-500/40 text-indigo-600 dark:text-indigo-400"
+                >
+                  {t('nav.downloadPortfolio')}
                 </Button>
               </div>
             </div>

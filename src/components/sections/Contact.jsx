@@ -6,12 +6,13 @@ import {
   Check,
   Send,
   FileDown,
+  Printer,
   Sparkles,
 } from 'lucide-react';
 import { Linkedin, Github, Instagram } from '../ui/BrandIcons';
 import confetti from 'canvas-confetti';
 import { useLanguage } from '../../hooks/useLanguage';
-import { copyToClipboard } from '../../utils/helpers';
+import { copyToClipboard, downloadPortfolioAsPdf } from '../../utils/helpers';
 import { Button } from '../ui/Button';
 
 export const Contact = () => {
@@ -192,8 +193,8 @@ export const Contact = () => {
               </div>
             </a>
 
-            {/* Direct CV Download Action */}
-            <div className="pt-2">
+            {/* Direct CV & Portfolio Download Action */}
+            <div className="pt-2 space-y-2.5 no-print">
               <Button
                 variant="primary"
                 size="lg"
@@ -204,11 +205,21 @@ export const Contact = () => {
               >
                 {t('contact.downloadCvButton')}
               </Button>
+
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => downloadPortfolioAsPdf('Muhammad-Irfan-Setiawan-Portofolio')}
+                icon={Printer}
+                className="w-full justify-center border-indigo-500/40 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/40"
+              >
+                {t('contact.downloadPortfolioButton')}
+              </Button>
             </div>
           </div>
 
           {/* Right: Quick Direct WhatsApp Composer Form (7 cols) */}
-          <div className="lg:col-span-7 p-8 rounded-3xl bg-white dark:bg-[#0c101d] border border-slate-200/80 dark:border-slate-800/80 shadow-xs">
+          <div className="lg:col-span-7 p-8 rounded-3xl bg-white dark:bg-[#0c101d] border border-slate-200/80 dark:border-slate-800/80 shadow-xs no-print">
             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
               {t('contact.formTitle')}
             </h3>

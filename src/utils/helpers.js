@@ -54,3 +54,24 @@ export function formatISODate(isoString, lang = 'id') {
     return isoString;
   }
 }
+
+/**
+ * Triggers the browser's native print-to-PDF flow with pre-configured
+ * document title for clean file naming (e.g. Muhammad-Irfan-Setiawan-Portofolio.pdf).
+ */
+export function downloadPortfolioAsPdf(filename = 'Muhammad-Irfan-Setiawan-Portofolio') {
+  if (typeof window === 'undefined') return;
+
+  const originalTitle = document.title;
+  const cleanFilename = filename.replace(/\.pdf$/i, '');
+  document.title = cleanFilename;
+
+  // Small delay to ensure title mutation is recognized by print subsystem
+  setTimeout(() => {
+    window.print();
+    // Restore original page title after print dialog closes
+    setTimeout(() => {
+      document.title = originalTitle;
+    }, 1500);
+  }, 100);
+}

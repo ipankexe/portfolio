@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MessageCircle, FileDown, Terminal } from 'lucide-react';
+import { MessageCircle, FileDown, Terminal, Printer } from 'lucide-react';
 import { Github, Linkedin, Instagram } from '../ui/BrandIcons';
 import { useLanguage } from '../../hooks/useLanguage';
 import { Button } from '../ui/Button';
-import { scrollToSection } from '../../utils/helpers';
+import { scrollToSection, downloadPortfolioAsPdf } from '../../utils/helpers';
 
 export const Hero = () => {
   const { t } = useLanguage();
@@ -19,6 +19,30 @@ export const Hero = () => {
       <div className="absolute bottom-10 right-10 w-[350px] h-[350px] bg-indigo-500/10 dark:bg-violet-600/10 rounded-full blur-[120px] pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        {/* Executive Print-Only Header (Formally structured for printed PDF output) */}
+        <div className="print-only w-full mb-8 pb-6 border-b-2 border-slate-300">
+          <div className="flex items-start justify-between gap-6">
+            <div>
+              <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+                Muhammad Irfan Setiawan, S.Kom.
+              </h1>
+              <p className="text-base font-semibold text-blue-600 mt-1">
+                Software Engineer & Web Developer
+              </p>
+              <p className="text-xs text-slate-600 mt-1">
+                Lulusan S1 Teknik Informatika • Universitas Dian Nuswantoro (UDINUS) • IPK 3,22
+              </p>
+            </div>
+            <div className="text-right text-xs text-slate-700 space-y-1 font-mono shrink-0">
+              <p>irfaanmuh27@gmail.com</p>
+              <p>+62 857-9947-9834</p>
+              <p>linkedin.com/in/irfanswettiawan</p>
+              <p>github.com/ipankexe</p>
+              <p>Semarang, Jawa Tengah</p>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           {/* Left Column: Headline, Bio & Action Buttons (7 cols) */}
@@ -68,7 +92,7 @@ export const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 mb-8 w-full sm:w-auto"
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-8 w-full sm:w-auto no-print"
             >
               <Button
                 variant="primary"
@@ -97,6 +121,16 @@ export const Hero = () => {
                 className="w-full sm:w-auto border-blue-500/30"
               >
                 {t('hero.downloadCv')}
+              </Button>
+
+              <Button
+                variant="glass"
+                size="lg"
+                onClick={() => downloadPortfolioAsPdf('Muhammad-Irfan-Setiawan-Portofolio')}
+                icon={Printer}
+                className="w-full sm:w-auto border-indigo-500/30 text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300"
+              >
+                {t('hero.downloadPortfolio')}
               </Button>
             </motion.div>
 
@@ -240,7 +274,7 @@ export const Hero = () => {
         </div>
 
         {/* Scroll down indicator */}
-        <div className="mt-16 sm:mt-24 flex justify-center">
+        <div className="mt-16 sm:mt-24 flex justify-center no-print">
           <button
             type="button"
             onClick={() => scrollToSection('about')}

@@ -87,7 +87,7 @@ export const Footer = () => {
               onClick={scrollToTop}
               aria-label={t('footer.backToTop')}
               title={t('footer.backToTop')}
-              className="w-10 h-10 ml-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white flex items-center justify-center shadow-md shadow-blue-600/20 transition-all cursor-pointer hover:-translate-y-0.5"
+              className="w-10 h-10 ml-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white flex items-center justify-center shadow-md shadow-blue-600/20 transition-all cursor-pointer hover:-translate-y-0.5 no-print"
             >
               <ArrowUp className="w-4.5 h-4.5" />
             </button>
@@ -96,7 +96,7 @@ export const Footer = () => {
 
         {/* Quick section links and copyright */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-500">
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 no-print">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -112,6 +112,11 @@ export const Footer = () => {
           <p className="text-center md:text-right">
             © {CURRENT_YEAR} Muhammad Irfan Setiawan. {t('footer.rights')}
           </p>
+        </div>
+
+        {/* Print-only verification footnote */}
+        <div className="print-only mt-4 pt-3 border-t border-slate-200 text-center text-[10px] text-slate-500">
+          Dokumen Portofolio Resmi • Muhammad Irfan Setiawan, S.Kom. • Email: irfaanmuh27@gmail.com • HP/WA: +62 857-9947-9834
         </div>
       </div>
     </footer>

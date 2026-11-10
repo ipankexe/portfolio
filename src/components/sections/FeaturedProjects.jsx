@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects } from '../../data/projects';
 import { useLanguage } from '../../hooks/useLanguage';
@@ -10,6 +10,25 @@ export const FeaturedProjects = () => {
   const { t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
+
+  // When printing or saving to PDF, ensure all projects are visible
+  useEffect(() => {
+    let savedCategory = activeCategory;
+    const handleBeforePrint = () => {
+      savedCategory = activeCategory;
+      setActiveCategory('all');
+    };
+    const handleAfterPrint = () => {
+      setActiveCategory(savedCategory);
+    };
+
+    window.addEventListener('beforeprint', handleBeforePrint);
+    window.addEventListener('afterprint', handleAfterPrint);
+    return () => {
+      window.removeEventListener('beforeprint', handleBeforePrint);
+      window.removeEventListener('afterprint', handleAfterPrint);
+    };
+  }, [activeCategory]);
 
   // Compute category counts
   const counts = useMemo(() => {

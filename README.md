@@ -6,7 +6,7 @@
 ![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?logo=vite&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-06B6D4?logo=tailwindcss&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-14.1-EA4C89?logo=framer&logoColor=white)
-![Vitest](https://img.shields.io/badge/Tests-13%20Passed-22c55e?logo=vitest&logoColor=white)
+![Vitest](https://img.shields.io/badge/Tests-16%20Passed-22c55e?logo=vitest&logoColor=white)
 ![Oxlint](https://img.shields.io/badge/Linter-0%20Errors-10b981)
 ![Bilingual](https://img.shields.io/badge/Language-ID%20%7C%20EN-blue)
 
@@ -19,6 +19,7 @@ A modern, high-performance, and fully responsive personal portfolio website buil
 ## 🌟 Key Highlights & Philosophy
 
 - **100% Authentic & Grounded Data:** Strictly built upon verified materials (Official CV PDF and active GitHub repository `@ipankexe`). Zero fabricated metrics, fake user counts, or inflated titles.
+- **Native Print-to-PDF Portfolio Export:** Dedicated print stylesheets (`@media print`), auto-expanding filters, executive print header, and dual download actions (Official 1-page CV & complete multi-page portfolio PDF) with crisp vector text and active hyperlinks.
 - **Dual-Track Experience Presentation:** Separates technical engineering (Fullstack Capstone POS with pessimistic locking `lockForUpdate`, Diskominfo Kota Semarang Web Damkar internship) and high-impact operational leadership (Dikala Kopi Group) with a dedicated **Transferable Soft Skills** analysis.
 - **Deep-Dive Case Study Architecture:** Detailed 13-point technical case studies with problem statements, architectural decisions, challenges, solutions, and code highlights accessible via interactive modals and dedicated permalinks (`/projects/:slug`).
 - **Interactive WhatsApp Message Composer:** Live message generator with pre-filled professional inquiries directly launching to WhatsApp (`+62 857 9947 9834`).

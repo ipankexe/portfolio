@@ -14,7 +14,7 @@ export const ProjectFilter = ({ activeCategory, onSelectCategory, counts = {} })
   ].filter((cat) => cat.id === 'all' || cat.count > 0);
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-2 mb-10" role="tablist" aria-label="Project filter tabs">
+    <div className="flex flex-wrap items-center justify-center gap-2 mb-10 no-print" role="tablist" aria-label="Project filter tabs">
       {categories.map((cat) => {
         const isActive = activeCategory === cat.id;
         return (

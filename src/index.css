@@ -90,3 +90,149 @@
   background-size: 24px 24px;
   background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
 }
+
+/* ==========================================================================
+   Print & PDF Export Styles
+   ========================================================================== */
+
+/* Hidden on screen by default */
+@media screen {
+  .print-only {
+    display: none !important;
+  }
+}
+
+@media print {
+  /* Set A4 page dimensions and safe margins */
+  @page {
+    size: A4 portrait;
+    margin: 12mm 14mm 14mm 14mm;
+  }
+
+  /* Universal reset to prevent animation freezes or hidden items */
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Root body print styling */
+  html,
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 10.5pt !important;
+    line-height: 1.45 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide navigation, drawers, interactive buttons & decorative backgrounds */
+  header,
+  nav,
+  .no-print,
+  button:not(.print-preserve),
+  input,
+  textarea,
+  [role="tablist"],
+  .bg-grid-pattern,
+  .bg-dot-pattern,
+  [class*="blur-"],
+  [class*="pointer-events-none"] {
+    display: none !important;
+  }
+
+  /* Show print-only elements */
+  .print-only {
+    display: block !important;
+  }
+
+  /* Section spacing for continuous printable flow */
+  section {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    break-inside: auto !important;
+  }
+
+  /* Prevent headings from being left alone at the bottom of pages */
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+    color: #0f172a !important;
+  }
+
+  p, span, li, label, div {
+    color: #1e293b !important;
+  }
+
+  .text-white,
+  .dark\:text-white,
+  .text-slate-900,
+  .dark\:text-slate-100 {
+    color: #0f172a !important;
+  }
+
+  .text-slate-600,
+  .text-slate-500,
+  .dark\:text-slate-400 {
+    color: #475569 !important;
+  }
+
+  /* Accent highlights for formal presentation */
+  .text-blue-600,
+  .dark\:text-blue-400,
+  .text-indigo-600,
+  .dark\:text-indigo-400,
+  .text-emerald-600,
+  .dark\:text-emerald-400 {
+    color: #2563eb !important;
+    font-weight: 600 !important;
+  }
+
+  /* Card and panel styling in print */
+  .rounded-2xl,
+  .rounded-3xl,
+  .glass-panel {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* Badges & tech chips */
+  .rounded-lg,
+  .rounded-xl,
+  .rounded-full {
+    border-color: #cbd5e1 !important;
+    background: #f8fafc !important;
+  }
+
+  /* Keep links clear and readable */
+  a {
+    color: #1d4ed8 !important;
+    text-decoration: none !important;
+  }
+
+  /* Hero photo frame sizing in print */
+  #hero img {
+    max-height: 280px !important;
+    object-fit: cover !important;
+    border-radius: 1rem !important;
+  }
+
+  /* Prevent awkward page cuts in project cards and timeline items */
+  article,
+  .group,
+  .relative.group {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}

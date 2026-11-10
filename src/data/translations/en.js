@@ -8,6 +8,12 @@ export const en = {
     analytics: 'Data & AI',
     contact: 'Contact',
     downloadCv: 'Download CV',
+    downloadPortfolio: 'Download Portfolio (PDF)',
+    downloadDropdown: 'Download Documents',
+    cvLabel: 'Curriculum Vitae (CV)',
+    cvSubtext: 'Official 1-page summary',
+    portfolioLabel: 'Full Portfolio (PDF)',
+    portfolioSubtext: 'Print-ready / Save as PDF',
     toggleTheme: 'Toggle Theme',
     toggleLang: 'Switch Language',
     openMenu: 'Open navigation menu',
@@ -23,6 +29,7 @@ export const en = {
     viewProjects: 'View Projects',
     contactMe: 'Get In Touch',
     downloadCv: 'Download CV',
+    downloadPortfolio: 'Download Portfolio (PDF)',
     scrollDown: 'Scroll Down',
     quickStats: {
       gpa: 'GPA 3.22/4.0',
@@ -209,6 +216,7 @@ export const en = {
     messagePlaceholder: 'Write your message, inquiry, or job opportunity...',
     sendButton: 'Send via WhatsApp',
     downloadCvButton: 'Download Complete CV (PDF)',
+    downloadPortfolioButton: 'Download Full Portfolio (PDF)',
   },
   footer: {
     rights: 'All rights reserved.',

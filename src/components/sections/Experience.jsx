@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, CheckCircle2 } from 'lucide-react';
 import { experiences } from '../../data/experience';
@@ -7,6 +7,25 @@ import { useLanguage } from '../../hooks/useLanguage';
 export const Experience = () => {
   const { language, t } = useLanguage();
   const [filterType, setFilterType] = useState('all');
+
+  // When printing or exporting to PDF, show all experiences
+  useEffect(() => {
+    let savedFilter = filterType;
+    const handleBeforePrint = () => {
+      savedFilter = filterType;
+      setFilterType('all');
+    };
+    const handleAfterPrint = () => {
+      setFilterType(savedFilter);
+    };
+
+    window.addEventListener('beforeprint', handleBeforePrint);
+    window.addEventListener('afterprint', handleAfterPrint);
+    return () => {
+      window.removeEventListener('beforeprint', handleBeforePrint);
+      window.removeEventListener('afterprint', handleAfterPrint);
+    };
+  }, [filterType]);
 
   const filteredExperiences = experiences.filter((exp) => {
     if (filterType === 'all') return true;
@@ -31,7 +50,7 @@ export const Experience = () => {
         </div>
 
         {/* Category Filters */}
-        <div className="flex justify-center mb-12">
+        <div className="flex justify-center mb-12 no-print">
           <div className="inline-flex p-1.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs">
             <button
               type="button"

@@ -8,6 +8,12 @@ export const id = {
     analytics: 'Data & AI',
     contact: 'Kontak',
     downloadCv: 'Unduh CV',
+    downloadPortfolio: 'Unduh Portofolio (PDF)',
+    downloadDropdown: 'Unduh Dokumen',
+    cvLabel: 'Curriculum Vitae (CV)',
+    cvSubtext: 'Format ringkas 1 lembar',
+    portfolioLabel: 'Portofolio Lengkap (PDF)',
+    portfolioSubtext: 'Format lengkap siap cetak / PDF',
     toggleTheme: 'Ganti Tema',
     toggleLang: 'Ganti Bahasa',
     openMenu: 'Buka menu navigasi',
@@ -23,6 +29,7 @@ export const id = {
     viewProjects: 'Lihat Proyek',
     contactMe: 'Hubungi Saya',
     downloadCv: 'Download CV',
+    downloadPortfolio: 'Download Portofolio (PDF)',
     scrollDown: 'Gulir ke Bawah',
     quickStats: {
       gpa: 'IPK 3,22',
@@ -209,6 +216,7 @@ export const id = {
     messagePlaceholder: 'Tuliskan pesan, penawaran posisi, atau peluang kerja sama...',
     sendButton: 'Kirim via WhatsApp',
     downloadCvButton: 'Download CV Lengkap (PDF)',
+    downloadPortfolioButton: 'Unduh Portofolio Lengkap (PDF)',
   },
   footer: {
     rights: 'Seluruh hak cipta dilindungi.',
